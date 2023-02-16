@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cactus</title>
+</head>
+<style type="text/css">
+	body{
+		margin: 30px;
+		background-image: url('https://cff2.earth.com/uploads/2018/02/09182927/Cacti-birds-and-life-in-the-Sonoran-Desert.jpg');
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.div{
+		background: green;
+		width: 50px;
+		padding: 20px;
+		z-index: 100;
+		display: inline-block;
+	}
+	h1{
+		font-family: Verdana, Geneva;
+		color: white;
+	}
+	.polaroid{
+  		max-width: 1380px;
+  		min-height: 700px;
+  		margin: auto;
+  		background-color: #001800;
+  		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  		opacity: 0.9;
+	}
+	table{
+		border-spacing: 0.5cm 0em;
+	}
+	.tabel{
+		border-spacing: 0.8cm 0em;
+		margin: 25px;
+	}
+
+.buttonMAP{
+  position: relative;
+  padding: 5px 7px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  display: inline-block;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 40px;
+}
+.buttonMAP span{
+  position: relative;
+  color: black;
+  font-weight: bold;
+  fot-size: 17px;
+  z-index: 1;
+}
+.buttonMAP .liquid {
+  position: absolute;
+  top: -83px;
+  left: 0;
+  width: 170px;
+  height: 200px;
+  background: #195905;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, .5);
+  transition: .5s;
+}
+.buttonMAP .liquid::after,
+.buttonMAP .liquid::before {
+  content: '';
+  width: 210%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  background: #efeff2;
+}
+.buttonMAP .liquid::before {
+  border-radius: 45%;
+  background: rgba(239, 239, 242, 100);
+  animation: animate 5s linear infinite;
+}
+.buttonMAP .liquid::after {
+  border-radius: 40%;
+  background: rgba(239, 239, 242, .5);
+  animation: animate 10s linear infinite;
+}
+.buttonMAP:hover .liquid{
+  top: -120px;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
+
+#drept{
+  animation:fadeout 7s ;
+  animation-iteration-count: infinite;
+}
+@keyframes fadeout {
+  0%    { opacity: 1; }
+  6%   { opacity: 1; }
+  7%   { opacity: 0; }
+  77%   { opacity: 0; }
+  78%   { opacity: 1; }
+  100%  { opacity: 1; }
+}
+
+
+</style>
+<body>
+  <div class="polaroid">
+  	<div class="div">
+  		<table>
+  			<tr>
+  				<td><div class="box">
+  					<img src="https://images.unsplash.com/photo-1554631221-f9603e6808be?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FjdHVzJTIwcGxhbnR8ZW58MHx8MHx8&w=1000&q=80" width="130" onmouseover="modifyImage()" onmouseleave="backImage()">
+    			</div></td>
+
+    			<td><h1 id="cactus">Cactusul din interiorul oamenilor</h1></td>
+
+    			<td>
+    				<div id="drept" style="position: absolute; z-index: 100;">
+    					<svg width="130" height="195">
+    						<polygon points="3,193 3,0 127,0 127,193" fill="#009900">
+      						<animate id="shape01" begin="0;shape02.end + 1s" attributeName="points" dur="0.5s" fill="freeze" to="10,100 10,0 110,0 110,100" />
+      						<animate id="shape02" begin="shape01.end + 5s" attributeName="points" dur="0.5s" fill="freeze" to="3,193 3,0 127,0 127,193" />
+      						<set attributeName="shape02" begin="shape01.end + 1s"/>
+    					</svg>
+    				</div>
+    				<div id="cerc" style="position: absolute; z-index:10;">
+    					<svg width="130" height="195">
+  							<rect rx="0" y="00" x="10" width="100" height="100" fill="#009900">
+      						<animate id="shape01" begin="0.4;shape02.end + 1.5s" attributeName="rx" dur="0.5s" fill="freeze" to="50%" />
+      						<animate id="shape02" begin="shape01.end + 4.6s" attributeName="rx" dur="0.5s" fill="freeze" to="0%" />
+      						<set attributeName="shape02" begin="shape01.end + 1s"/>
+						</svg>
+    				</div>
+    				<div id="trebuie">
+    					<svg width="130" height="195">
+    					<polygon points="43,153 40,43 87,40 87,153" stroke="#21421e" stroke-width="3px" fill="none"></polygon>
+    					<polygon points="23,173 20,23 107,20 107,173" stroke="#87a96b" stroke-width="3px" fill="none"></polygon>
+						<polygon points="3,193 3,0 127,0 127,193" stroke="#009900" stroke-width="3px" fill="none"></polygon>
+						</svg>
+    				</div>
+    			</td>
+    		</tr>
+  		</table>
+	</div>
+	<table class="tabel">
+  		<tr>
+  			<td>
+  				<div class="buttonMAP" onmouseover="whiteStart()" onmouseleave="backStart()" onclick="startAnimation()"><!--BUTTON-->
+					<span id="start">Start</span>
+					<div class="liquid"></div>
+				</div>
+  			</td>
+  			<td>
+  				<div class="buttonMAP" onmouseover="whiteStop()" onmouseleave="backStop()" onclick="stopAnimation()"><!--BUTTON-->
+					<span id="stop">Stop</span>
+					<div class="liquid"></div>
+				</div>
+  			</td>
+  		</tr>
+  		<tr>
+  			<td colspan="2" align="center">
+  				<svg width="350" height="350">
+  					<ellipse cx="100" cy="100" rx="30" ry="80" stroke="#21421e" stroke-width="0px" fill="#87a96b"></ellipse>
+  					<polygon points="70,110 130,110 120,190 80,190" stroke="#21421e" stroke-width="0px" fill="#87a96b"></polygon>
+
+  					<ellipse cx="135" cy="140" rx="20" ry="7" stroke="#21421e" stroke-width="0px" fill="#87a96b"></ellipse>
+    				<ellipse cx="155" cy="110" rx="12" ry="35" stroke="#21421e" stroke-width="0px" fill="#87a96b"></ellipse>
+    				<line x1="137" y1="145" x2="159" y2="143" stroke="#87a96b" stroke-width="4px"></line>
+    				
+    				<ellipse cx="67" cy="122" rx="20" ry="7" stroke="#21421e" stroke-width="0px" fill="#87a96b"></ellipse>
+    				<ellipse cx="47" cy="97" rx="12" ry="35" stroke="#21421e" stroke-width="0px" fill="#87a96b"></ellipse>
+    				<line x1="47" y1="129" x2="100" y2="128" stroke="#87a96b" stroke-width="5px"></line>
+
+    				<line x1="82" y1="23" x2="90" y2="32" stroke="black" stroke-width="3px"></line>
+    				<line x1="70" y1="35" x2="81" y2="52" stroke="black" stroke-width="3px"></line>
+    				<line x1="63" y1="58" x2="77" y2="67" stroke="black" stroke-width="3px"></line>
+    				<line x1="30" y1="68" x2="41" y2="75" stroke="black" stroke-width="3px"></line>
+    				<line x1="31" y1="78" x2="38" y2="85" stroke="black" stroke-width="3px"></line>
+    				<line x1="167" y1="70" x2="160" y2="88" stroke="black" stroke-width="3px"></line>
+    				<line x1="136" y1="80" x2="127" y2="96" stroke="black" stroke-width="3px"></line>
+    				<line x1="133" y1="62" x2="123" y2="76" stroke="black" stroke-width="3px"></line>
+    				<line x1="133" y1="49" x2="123" y2="66" stroke="black" stroke-width="3px"></line>
+
+    				<circle cx="117" cy="35" r="9" stroke="green" stroke-width="0px" fill="#cca01d"></circle>
+    				<circle cx="117" cy="25" r="4" stroke="green" stroke-width="0px" fill="#c32148"></circle>
+    				<circle cx="117" cy="45" r="5" stroke="green" stroke-width="0px" fill="#c71585"></circle>
+    				<circle cx="107" cy="35" r="3" stroke="green" stroke-width="0px" fill="#4b0082"></circle>
+    				<circle cx="127" cy="35" r="4" stroke="green" stroke-width="0px" fill="#ff4500"></circle>
+    				<circle cx="110" cy="42" r="5" stroke="green" stroke-width="0px" fill="#cb410b"></circle>
+    				<circle cx="115" cy="40" r="3" stroke="green" stroke-width="0px" fill="#c32148"></circle>
+    				<circle cx="125" cy="41" r="4" stroke="green" stroke-width="0px" fill="#4b0082"></circle>
+    				<circle cx="122" cy="44" r="3" stroke="green" stroke-width="0px" fill="#4b0082"></circle>
+    				<circle cx="110" cy="29" r="5" stroke="green" stroke-width="0px" fill="#ff4500"></circle>
+    				<circle cx="126" cy="28" r="4" stroke="green" stroke-width="0px" fill="#c71585"></circle>
+    				<circle cx="122" cy="26" r="3" stroke="green" stroke-width="0px" fill="#ff4500"></circle>
+				</svg>
+  			</td>
+  		</tr>
+  	</table>
+
+
+
+
+  </div>
+<script type="text/javascript">
+	document.getElementById('drept').style.display = "none";
+	document.getElementById('cerc').style.display = "none";
+	function modifyImage() {
+		document.getElementById('cactus').style.color = "#87a96b";
+	}
+	function backImage() {
+		document.getElementById('cactus').style.color = "white";
+	}
+
+	function whiteStart() { document.getElementById('start').style.color = "white"; }
+	function backStart() { document.getElementById('start').style.color = "black"; }
+
+	function whiteStop() { document.getElementById('stop').style.color = "white"; }
+	function backStop() { document.getElementById('stop').style.color = "black"; }
+
+	
+	function startAnimation() {
+		document.getElementById('trebuie').style.visibility = 'hidden';
+		document.getElementById('drept').style.display = "block";
+		document.getElementById('cerc').style.display = "block";
+	}
+	function stopAnimation() {
+		document.getElementById('trebuie').style.visibility = 'visible';
+		document.getElementById('drept').style.display = "none";
+		document.getElementById('cerc').style.display = "none";
+	}
+</script>
+</body>
+</html>
